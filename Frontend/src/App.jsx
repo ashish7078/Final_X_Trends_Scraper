@@ -13,7 +13,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API}/api/latest-trends/`);
+      const res = await fetch(`https://b7261a20afaf.ngrok-free.app/api/latest-trends/`);
       if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
       const data = await res.json();
       setTrends(data);
@@ -30,7 +30,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API}/api/scrape-save-trend/`, { method: "POST" });
+      const res = await fetch(`https://b7261a20afaf.ngrok-free.app/api/scrape-save-trend/`, { method: "POST" });
       if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
       const data = await res.json();
       setTrends(data);
@@ -47,7 +47,7 @@ function App() {
       <h1>X Trending Topics</h1>
 
       <div className="buttons">
-        <button onClick={fetchTrends}>Fetch Latest Trends</button>
+        {/* <button onClick={fetchTrends}>Fetch Latest Trends</button> */}
         <button onClick={scrapeSaveTrend}>Scrape & Save Trend</button>
       </div>
 

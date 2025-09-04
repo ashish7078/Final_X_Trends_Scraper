@@ -64,7 +64,7 @@ def fetch_top_trends(driver):
     # Pick 5 trends after explore opens
     opened_div = driver.find_element(
         By.XPATH,
-        '//div[@aria-label="Timeline: Explore"]//div[@data-testid="cellInnerDiv"][6]'
+        '//div[@aria-label="Timeline: Explore"]//div[@data-testid="cellInnerDiv"][7]'
     )
 
     next_five_divs = opened_div.find_elements(
