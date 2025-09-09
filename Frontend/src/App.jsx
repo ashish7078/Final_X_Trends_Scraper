@@ -13,7 +13,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`https://3b3237584dd0.ngrok-free.app/api/latest-trends/`);
+      const res = await fetch(`https://8ab8ebfbca67.ngrok-free.app/api/latest-trends/`);
       if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
       const data = await res.json();
       setTrends(data);
@@ -30,7 +30,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`https://3b3237584dd0.ngrok-free.app/api/scrape-save-trend/`, { method: "POST" });
+      const res = await fetch(`https://8ab8ebfbca67.ngrok-free.app/api/scrape-save-trend/`, { method: "POST" });
       if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
       const data = await res.json();
       setTrends(data);
